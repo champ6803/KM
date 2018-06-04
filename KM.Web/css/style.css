@@ -1,0 +1,18 @@
+﻿.info-box {
+    border: 1px solid #f1f5f7;
+}
+
+.info-box:hover {
+    background-color: #f1f5f7;
+    border: #f1f5f7;
+    /*color: #ffffff;*/
+    cursor: pointer;
+}
+
+.info-box:hover a {
+    /*color: #ffffff;*/
+}
+
+.treeview-submenu > li > a {
+    padding: 50px;
+}

@@ -1,0 +1,89 @@
+﻿<!-- header name -->
+@section header{
+    File Sharing Center
+}
+<!-- navigation -->
+@section nav{
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#"><i class="fa fa-book"></i> Knowledge Management Systems</a></li>
+        <li class="breadcrumb-item"><a href="#">File Sharing Center</a></li>
+        <li class="breadcrumb-item active">Categories</li>
+    </ol>
+}
+<!-- content -->
+<section class="content">
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title">Categories</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <a href="@Url.Content("~/Knowledge/Documents")">
+                            <span class="info-box-icon bg-blue"><i class="fa fa-windows"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-number">Software</span>
+                                <span class="info-box-text">Knowledge</span>
+                            </div>
+                        </a>
+                        <!-- /.info-box-content -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <a href="@Url.Content("~/Knowledge/Documents")">
+                            <span class="info-box-icon bg-success"><i class="fa fa-wrench"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-number">Troubleshooting</span>
+                                <span class="info-box-text">Knowledge</span>
+                            </div>
+                        </a>
+                        <!-- /.info-box-content -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <a href="@Url.Content("~/Knowledge/Documents")">
+                            <span class="info-box-icon bg-purple"><i class="fa fa-file"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-number">Manual</span>
+                                <span class="info-box-text">Knowledge</span>
+                            </div>
+                        </a>
+                        <!-- /.info-box-content -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <a href="@Url.Content("~/Knowledge/Documents")">
+                            <span class="info-box-icon bg-red"><i class="fa fa-laptop"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-number">Hardware</span>
+                                <span class="info-box-text">Knowledge</span>
+                            </div>
+                        </a>
+                        <!-- /.info-box-content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.box-body -->
+        @*<div class="box-footer">
+                Footer
+            </div>*@
+        <!-- /.box-footer-->
+    </div>
+    <!-- /.box -->
+</section>

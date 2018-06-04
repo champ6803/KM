@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="kmModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="fis_mst_doc_type">
+          <Key>
+            <PropertyRef Name="FIS_MST_DOC_TYPE_ID" />
+          </Key>
+          <Property Name="FIS_MST_DOC_TYPE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FIS_MST_DOC_TYPE_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="FIS_MST_DOC_TYPE_IS_ACTIVE" Type="bool" Nullable="false" />
+          <Property Name="FIS_MST_DOC_TYPE_CREATED_BY" Type="varchar" MaxLength="45" />
+          <Property Name="FIS_MST_DOC_TYPE_CREATED_BYID" Type="int" />
+          <Property Name="FIS_MST_DOC_TYPE_CREATED_AT" Type="timestamp" Precision="0" Nullable="false" />
+          <Property Name="FIS_MST_DOC_TYPE_UPDATED_BYID" Type="int" />
+          <Property Name="FIS_MST_DOC_TYPE_UPDATED_AT" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fis_t_data_insrt">
+          <Key>
+            <PropertyRef Name="FIS_T_DATA_INSRT_ID" />
+          </Key>
+          <Property Name="FIS_T_DATA_INSRT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FIS_MST_DOC_TYPE_ID" Type="int" Nullable="false" />
+          <Property Name="USRINFO_MST_SITE_ID" Type="int" Nullable="false" />
+          <Property Name="USRINFO_T_USR_ID" Type="int" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_NAME" Type="varchar" MaxLength="300" />
+          <Property Name="FIS_T_DATA_INSRT_IS_ ACTIVE" Type="bool" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_CREATED_BY" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_CREATED_AT" Type="timestamp" Precision="0" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_UPDATED_BY" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_UPDATED_AT" Type="timestamp" Precision="0" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_FLAG" Type="int" />
+        </EntityType>
+        <EntityType Name="fis_t_data_insrt_detail">
+          <Key>
+            <PropertyRef Name="FIS_T_DATA_INSRT_DETAIL_ID" />
+          </Key>
+          <Property Name="FIS_T_DATA_INSRT_DETAIL_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_ID" Type="int" />
+          <Property Name="FIS_T_DATA_INSRT_DETAIL" Type="varchar" MaxLength="5100" />
+          <Property Name="FIS_T_DATA_INSRT_DETAIL_IS_ACTIVE" Type="bool" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_DETAIL_CREATED_BY" Type="varchar" MaxLength="50" />
+          <Property Name="FIS_T_DATA_INSRT_DETAIL_CREATED_AT" Type="timestamp" Precision="0" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_DETAIL_UPDATED_BY" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_DETAIL_UPDATED_AT" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="usrinfo_mst_site">
+          <Key>
+            <PropertyRef Name="USRINFO_MST_SITE_ID" />
+          </Key>
+          <Property Name="USRINFO_MST_SITE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USRINFO_MST_SITE_NAME" Type="varchar" MaxLength="45" />
+          <Property Name="USRINFO_MST_SITE_IS_ACTIVE" Type="bool" Nullable="false" />
+          <Property Name="USRINFO_MST_SITE_CREATED_BY" Type="varchar" MaxLength="50" />
+          <Property Name="USRINFO_MST_SITE_CREATED_AT" Type="timestamp" Precision="0" Nullable="false" />
+          <Property Name="USRINFO_MST_SITE_UPDATED_BY" Type="varchar" MaxLength="50" />
+          <Property Name="USRINFO_ MST_SITE_UPDATED_AT" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="kmModelStoreContainer">
+          <EntitySet Name="fis_mst_doc_type" EntityType="Self.fis_mst_doc_type" Schema="km" store:Type="Tables" />
+          <EntitySet Name="fis_t_data_insrt" EntityType="Self.fis_t_data_insrt" Schema="km" store:Type="Tables" />
+          <EntitySet Name="fis_t_data_insrt_detail" EntityType="Self.fis_t_data_insrt_detail" Schema="km" store:Type="Tables" />
+          <EntitySet Name="usrinfo_mst_site" EntityType="Self.usrinfo_mst_site" Schema="km" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="kmModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="fis_mst_doc_type">
+          <Key>
+            <PropertyRef Name="FIS_MST_DOC_TYPE_ID" />
+          </Key>
+          <Property Name="FIS_MST_DOC_TYPE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIS_MST_DOC_TYPE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FIS_MST_DOC_TYPE_IS_ACTIVE" Type="Boolean" Nullable="false" />
+          <Property Name="FIS_MST_DOC_TYPE_CREATED_BY" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="FIS_MST_DOC_TYPE_CREATED_BYID" Type="Int32" />
+          <Property Name="FIS_MST_DOC_TYPE_CREATED_AT" Type="DateTime" Nullable="false" />
+          <Property Name="FIS_MST_DOC_TYPE_UPDATED_BYID" Type="Int32" />
+          <Property Name="FIS_MST_DOC_TYPE_UPDATED_AT" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fis_t_data_insrt">
+          <Key>
+            <PropertyRef Name="FIS_T_DATA_INSRT_ID" />
+          </Key>
+          <Property Name="FIS_T_DATA_INSRT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIS_MST_DOC_TYPE_ID" Type="Int32" Nullable="false" />
+          <Property Name="USRINFO_MST_SITE_ID" Type="Int32" Nullable="false" />
+          <Property Name="USRINFO_T_USR_ID" Type="Int32" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_NAME" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="FIS_T_DATA_INSRT_IS__ACTIVE" Type="Boolean" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_CREATED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_CREATED_AT" Type="DateTime" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_UPDATED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_UPDATED_AT" Type="DateTime" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_FLAG" Type="Int32" />
+        </EntityType>
+        <EntityType Name="fis_t_data_insrt_detail">
+          <Key>
+            <PropertyRef Name="FIS_T_DATA_INSRT_DETAIL_ID" />
+          </Key>
+          <Property Name="FIS_T_DATA_INSRT_DETAIL_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIS_T_DATA_INSRT_ID" Type="Int32" />
+          <Property Name="FIS_T_DATA_INSRT_DETAIL1" Type="String" MaxLength="5100" FixedLength="false" Unicode="false" />
+          <Property Name="FIS_T_DATA_INSRT_DETAIL_IS_ACTIVE" Type="Boolean" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_DETAIL_CREATED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FIS_T_DATA_INSRT_DETAIL_CREATED_AT" Type="DateTime" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_DETAIL_UPDATED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIS_T_DATA_INSRT_DETAIL_UPDATED_AT" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="usrinfo_mst_site">
+          <Key>
+            <PropertyRef Name="USRINFO_MST_SITE_ID" />
+          </Key>
+          <Property Name="USRINFO_MST_SITE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USRINFO_MST_SITE_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="USRINFO_MST_SITE_IS_ACTIVE" Type="Boolean" Nullable="false" />
+          <Property Name="USRINFO_MST_SITE_CREATED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USRINFO_MST_SITE_CREATED_AT" Type="DateTime" Nullable="false" />
+          <Property Name="USRINFO_MST_SITE_UPDATED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USRINFO__MST_SITE_UPDATED_AT" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="kmEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="fis_mst_doc_type" EntityType="Self.fis_mst_doc_type" />
+          <EntitySet Name="fis_t_data_insrt" EntityType="Self.fis_t_data_insrt" />
+          <EntitySet Name="fis_t_data_insrt_detail" EntityType="Self.fis_t_data_insrt_detail" />
+          <EntitySet Name="usrinfo_mst_site" EntityType="Self.usrinfo_mst_site" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="kmModelStoreContainer" CdmEntityContainer="kmEntities">
+          <EntitySetMapping Name="fis_mst_doc_type">
+            <EntityTypeMapping TypeName="kmModel.fis_mst_doc_type">
+              <MappingFragment StoreEntitySet="fis_mst_doc_type">
+                <ScalarProperty Name="FIS_MST_DOC_TYPE_ID" ColumnName="FIS_MST_DOC_TYPE_ID" />
+                <ScalarProperty Name="FIS_MST_DOC_TYPE_NAME" ColumnName="FIS_MST_DOC_TYPE_NAME" />
+                <ScalarProperty Name="FIS_MST_DOC_TYPE_IS_ACTIVE" ColumnName="FIS_MST_DOC_TYPE_IS_ACTIVE" />
+                <ScalarProperty Name="FIS_MST_DOC_TYPE_CREATED_BY" ColumnName="FIS_MST_DOC_TYPE_CREATED_BY" />
+                <ScalarProperty Name="FIS_MST_DOC_TYPE_CREATED_BYID" ColumnName="FIS_MST_DOC_TYPE_CREATED_BYID" />
+                <ScalarProperty Name="FIS_MST_DOC_TYPE_CREATED_AT" ColumnName="FIS_MST_DOC_TYPE_CREATED_AT" />
+                <ScalarProperty Name="FIS_MST_DOC_TYPE_UPDATED_BYID" ColumnName="FIS_MST_DOC_TYPE_UPDATED_BYID" />
+                <ScalarProperty Name="FIS_MST_DOC_TYPE_UPDATED_AT" ColumnName="FIS_MST_DOC_TYPE_UPDATED_AT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fis_t_data_insrt">
+            <EntityTypeMapping TypeName="kmModel.fis_t_data_insrt">
+              <MappingFragment StoreEntitySet="fis_t_data_insrt">
+                <ScalarProperty Name="FIS_T_DATA_INSRT_ID" ColumnName="FIS_T_DATA_INSRT_ID" />
+                <ScalarProperty Name="FIS_MST_DOC_TYPE_ID" ColumnName="FIS_MST_DOC_TYPE_ID" />
+                <ScalarProperty Name="USRINFO_MST_SITE_ID" ColumnName="USRINFO_MST_SITE_ID" />
+                <ScalarProperty Name="USRINFO_T_USR_ID" ColumnName="USRINFO_T_USR_ID" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_NAME" ColumnName="FIS_T_DATA_INSRT_NAME" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_IS__ACTIVE" ColumnName="FIS_T_DATA_INSRT_IS_ ACTIVE" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_CREATED_BY" ColumnName="FIS_T_DATA_INSRT_CREATED_BY" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_CREATED_AT" ColumnName="FIS_T_DATA_INSRT_CREATED_AT" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_UPDATED_BY" ColumnName="FIS_T_DATA_INSRT_UPDATED_BY" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_UPDATED_AT" ColumnName="FIS_T_DATA_INSRT_UPDATED_AT" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_FLAG" ColumnName="FIS_T_DATA_INSRT_FLAG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fis_t_data_insrt_detail">
+            <EntityTypeMapping TypeName="kmModel.fis_t_data_insrt_detail">
+              <MappingFragment StoreEntitySet="fis_t_data_insrt_detail">
+                <ScalarProperty Name="FIS_T_DATA_INSRT_DETAIL_ID" ColumnName="FIS_T_DATA_INSRT_DETAIL_ID" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_ID" ColumnName="FIS_T_DATA_INSRT_ID" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_DETAIL1" ColumnName="FIS_T_DATA_INSRT_DETAIL" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_DETAIL_IS_ACTIVE" ColumnName="FIS_T_DATA_INSRT_DETAIL_IS_ACTIVE" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_DETAIL_CREATED_BY" ColumnName="FIS_T_DATA_INSRT_DETAIL_CREATED_BY" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_DETAIL_CREATED_AT" ColumnName="FIS_T_DATA_INSRT_DETAIL_CREATED_AT" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_DETAIL_UPDATED_BY" ColumnName="FIS_T_DATA_INSRT_DETAIL_UPDATED_BY" />
+                <ScalarProperty Name="FIS_T_DATA_INSRT_DETAIL_UPDATED_AT" ColumnName="FIS_T_DATA_INSRT_DETAIL_UPDATED_AT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usrinfo_mst_site">
+            <EntityTypeMapping TypeName="kmModel.usrinfo_mst_site">
+              <MappingFragment StoreEntitySet="usrinfo_mst_site">
+                <ScalarProperty Name="USRINFO_MST_SITE_ID" ColumnName="USRINFO_MST_SITE_ID" />
+                <ScalarProperty Name="USRINFO_MST_SITE_NAME" ColumnName="USRINFO_MST_SITE_NAME" />
+                <ScalarProperty Name="USRINFO_MST_SITE_IS_ACTIVE" ColumnName="USRINFO_MST_SITE_IS_ACTIVE" />
+                <ScalarProperty Name="USRINFO_MST_SITE_CREATED_BY" ColumnName="USRINFO_MST_SITE_CREATED_BY" />
+                <ScalarProperty Name="USRINFO_MST_SITE_CREATED_AT" ColumnName="USRINFO_MST_SITE_CREATED_AT" />
+                <ScalarProperty Name="USRINFO_MST_SITE_UPDATED_BY" ColumnName="USRINFO_MST_SITE_UPDATED_BY" />
+                <ScalarProperty Name="USRINFO__MST_SITE_UPDATED_AT" ColumnName="USRINFO_ MST_SITE_UPDATED_AT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
