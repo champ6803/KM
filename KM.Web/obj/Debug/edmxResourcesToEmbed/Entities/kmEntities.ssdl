@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kmModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="fis_mst_doc_type">
+    <Key>
+      <PropertyRef Name="FIS_MST_DOC_TYPE_ID" />
+    </Key>
+    <Property Name="FIS_MST_DOC_TYPE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIS_MST_DOC_TYPE_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="FIS_MST_DOC_TYPE_DETAIL" Type="varchar" MaxLength="50" />
+    <Property Name="FIS_MST_DOC_TYPE_IS_ACTIVE" Type="bool" Nullable="false" />
+    <Property Name="FIS_MST_DOC_TYPE_USR_INSRT" Type="varchar" MaxLength="45" />
+    <Property Name="FIS_MST_DOC_TYPE_IDUSR_INSRT" Type="int" />
+    <Property Name="FIS_MST_DOC_TYPE_DATETIMESTMP" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="fis_t_data_insrt">
+    <Key>
+      <PropertyRef Name="FIS_T_DATA_INSRT_ID" />
+    </Key>
+    <Property Name="FIS_T_DATA_INSRT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIS_MST_DOC_TYPE_ID" Type="int" Nullable="false" />
+    <Property Name="USRINFO_MST_SITE_ID" Type="int" Nullable="false" />
+    <Property Name="USRINFO_T_USR_ID" Type="int" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_DATETIME" Type="datetime" Precision="0" />
+    <Property Name="FIS_T_DATA_INSRT_DATETIMESTMP" Type="datetime" Precision="0" />
+    <Property Name="FIS_T_DATA_INSRT_FLAG" Type="int" />
+  </EntityType>
+  <EntityType Name="fis_t_data_insrt_detail">
+    <Key>
+      <PropertyRef Name="FIS_T_DATA_INSRT_DETAIL_ID" />
+    </Key>
+    <Property Name="FIS_T_DATA_INSRT_DETAIL_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_ID" Type="int" />
+    <Property Name="FIS_T_DATA_INSRT_DETAIL" Type="varchar" MaxLength="5100" />
+    <Property Name="FIS_T_DATA_INSRT_DETAIL_DATETIMESTMP" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="usrinfo_mst_site">
+    <Key>
+      <PropertyRef Name="USRINFO_MST_SITE_ID" />
+    </Key>
+    <Property Name="USRINFO_MST_SITE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USRINFO_MST_SITE_NAME" Type="varchar" MaxLength="45" />
+    <Property Name="USRINFO_MST_SITE_DATE" Type="date" />
+  </EntityType>
+  <EntityContainer Name="kmModelStoreContainer">
+    <EntitySet Name="fis_mst_doc_type" EntityType="Self.fis_mst_doc_type" Schema="km" store:Type="Tables" />
+    <EntitySet Name="fis_t_data_insrt" EntityType="Self.fis_t_data_insrt" Schema="km" store:Type="Tables" />
+    <EntitySet Name="fis_t_data_insrt_detail" EntityType="Self.fis_t_data_insrt_detail" Schema="km" store:Type="Tables" />
+    <EntitySet Name="usrinfo_mst_site" EntityType="Self.usrinfo_mst_site" Schema="km" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

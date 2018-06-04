@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="kmModelStoreContainer" CdmEntityContainer="kmEntities">
+    <EntitySetMapping Name="fis_t_data_insrt">
+      <EntityTypeMapping TypeName="kmModel.fis_t_data_insrt">
+        <MappingFragment StoreEntitySet="fis_t_data_insrt">
+          <ScalarProperty Name="FIS_T_DATA_INSRT_ID" ColumnName="FIS_T_DATA_INSRT_ID" />
+          <ScalarProperty Name="FIS_MST_DOC_TYPE_ID" ColumnName="FIS_MST_DOC_TYPE_ID" />
+          <ScalarProperty Name="USRINFO_MST_SITE_ID" ColumnName="USRINFO_MST_SITE_ID" />
+          <ScalarProperty Name="USRINFO_T_USR_ID" ColumnName="USRINFO_T_USR_ID" />
+          <ScalarProperty Name="FIS_T_DATA_INSRT_DATETIME" ColumnName="FIS_T_DATA_INSRT_DATETIME" />
+          <ScalarProperty Name="FIS_T_DATA_INSRT_DATETIMESTMP" ColumnName="FIS_T_DATA_INSRT_DATETIMESTMP" />
+          <ScalarProperty Name="FIS_T_DATA_INSRT_FLAG" ColumnName="FIS_T_DATA_INSRT_FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fis_t_data_insrt_detail">
+      <EntityTypeMapping TypeName="kmModel.fis_t_data_insrt_detail">
+        <MappingFragment StoreEntitySet="fis_t_data_insrt_detail">
+          <ScalarProperty Name="FIS_T_DATA_INSRT_DETAIL_ID" ColumnName="FIS_T_DATA_INSRT_DETAIL_ID" />
+          <ScalarProperty Name="FIS_T_DATA_INSRT_ID" ColumnName="FIS_T_DATA_INSRT_ID" />
+          <ScalarProperty Name="FIS_T_DATA_INSRT_DETAIL1" ColumnName="FIS_T_DATA_INSRT_DETAIL" />
+          <ScalarProperty Name="FIS_T_DATA_INSRT_DETAIL_DATETIMESTMP" ColumnName="FIS_T_DATA_INSRT_DETAIL_DATETIMESTMP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usrinfo_mst_site">
+      <EntityTypeMapping TypeName="kmModel.usrinfo_mst_site">
+        <MappingFragment StoreEntitySet="usrinfo_mst_site">
+          <ScalarProperty Name="USRINFO_MST_SITE_ID" ColumnName="USRINFO_MST_SITE_ID" />
+          <ScalarProperty Name="USRINFO_MST_SITE_NAME" ColumnName="USRINFO_MST_SITE_NAME" />
+          <ScalarProperty Name="USRINFO_MST_SITE_DATE" ColumnName="USRINFO_MST_SITE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fis_mst_doc_type">
+      <EntityTypeMapping TypeName="kmModel.fis_mst_doc_type">
+        <MappingFragment StoreEntitySet="fis_mst_doc_type">
+          <ScalarProperty Name="FIS_MST_DOC_TYPE_DATETIMESTMP" ColumnName="FIS_MST_DOC_TYPE_DATETIMESTMP" />
+          <ScalarProperty Name="FIS_MST_DOC_TYPE_IDUSR_INSRT" ColumnName="FIS_MST_DOC_TYPE_IDUSR_INSRT" />
+          <ScalarProperty Name="FIS_MST_DOC_TYPE_USR_INSRT" ColumnName="FIS_MST_DOC_TYPE_USR_INSRT" />
+          <ScalarProperty Name="FIS_MST_DOC_TYPE_IS_ACTIVE" ColumnName="FIS_MST_DOC_TYPE_IS_ACTIVE" />
+          <ScalarProperty Name="FIS_MST_DOC_TYPE_DETAIL" ColumnName="FIS_MST_DOC_TYPE_DETAIL" />
+          <ScalarProperty Name="FIS_MST_DOC_TYPE_NAME" ColumnName="FIS_MST_DOC_TYPE_NAME" />
+          <ScalarProperty Name="FIS_MST_DOC_TYPE_ID" ColumnName="FIS_MST_DOC_TYPE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

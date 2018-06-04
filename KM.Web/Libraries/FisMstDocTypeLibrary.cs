@@ -23,7 +23,7 @@ namespace KM.Web.Libraries
                     return new FisMstDocTypeModel()
                     {
                         FIS_MST_DOC_TYPE_ID = o.FIS_MST_DOC_TYPE_ID,
-                        FIS_MST_DOC_TYPE_NAME = o.FIS_MST_DOC_TYPE_NAME,
+                        FIS_MST_DOC_TYPE_NAME = o.FIS_MST_DOC_TYPE_DETAIL,
                         FIS_MST_DOC_TYPE_IS_ACTIVE = o.FIS_MST_DOC_TYPE_IS_ACTIVE
                     };
                 }
