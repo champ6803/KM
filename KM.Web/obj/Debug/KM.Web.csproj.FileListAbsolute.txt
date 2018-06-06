@@ -1,8 +1,7 @@
-D:\Workspace\KM\KM.Web\obj\Debug\KM.Web.csprojResolveAssemblyReference.cache
+D:\Workspace\KM\KM.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 D:\Workspace\KM\KM.Web\bin\ApplicationInsights.config
 D:\Workspace\KM\KM.Web\bin\roslyn\csc.exe
 D:\Workspace\KM\KM.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\Workspace\KM\KM.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 D:\Workspace\KM\KM.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
 D:\Workspace\KM\KM.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 D:\Workspace\KM\KM.Web\bin\roslyn\Microsoft.CSharp.Core.targets
@@ -82,5 +81,6 @@ D:\Workspace\KM\KM.Web\bin\Microsoft.Owin.Security.OAuth.xml
 D:\Workspace\KM\KM.Web\bin\Microsoft.Owin.Security.Google.xml
 D:\Workspace\KM\KM.Web\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Workspace\KM\KM.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Workspace\KM\KM.Web\obj\Debug\KM.Web.csprojResolveAssemblyReference.cache
 D:\Workspace\KM\KM.Web\obj\Debug\KM.Web.dll
 D:\Workspace\KM\KM.Web\obj\Debug\KM.Web.pdb

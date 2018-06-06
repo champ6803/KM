@@ -1,5 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="kmModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="kmEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="fis_mst_doc_type" EntityType="kmModel.fis_mst_doc_type" />
+    <EntitySet Name="fis_t_data_insrt" EntityType="kmModel.fis_t_data_insrt" />
+    <EntitySet Name="fis_t_data_insrt_detail" EntityType="kmModel.fis_t_data_insrt_detail" />
+    <EntitySet Name="usrinfo_mst_site" EntityType="kmModel.usrinfo_mst_site" />
+  </EntityContainer>
+  <EntityType Name="fis_mst_doc_type">
+    <Key>
+      <PropertyRef Name="FIS_MST_DOC_TYPE_ID" />
+    </Key>
+    <Property Name="FIS_MST_DOC_TYPE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FIS_MST_DOC_TYPE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FIS_MST_DOC_TYPE_DETAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FIS_MST_DOC_TYPE_IS_ACTIVE" Type="Boolean" Nullable="false" />
+    <Property Name="FIS_MST_DOC_TYPE_CREATED_BY" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FIS_MST_DOC_TYPE_CREATED_BY_ID" Type="Int32" />
+    <Property Name="FIS_MST_DOC_TYPE_CREATED_AT" Type="DateTime" Nullable="false" />
+    <Property Name="FIS_MST_DOC_TYPE_UPDATED_BY" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FIS_MST_DOC_TYPE_UPDATED_AT" Type="DateTime" Nullable="false" />
+  </EntityType>
   <EntityType Name="fis_t_data_insrt">
     <Key>
       <PropertyRef Name="FIS_T_DATA_INSRT_ID" />
@@ -28,23 +48,5 @@
     <Property Name="USRINFO_MST_SITE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="USRINFO_MST_SITE_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="USRINFO_MST_SITE_DATE" Type="DateTime" />
-  </EntityType>
-  <EntityContainer Name="kmEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="fis_t_data_insrt" EntityType="Self.fis_t_data_insrt" />
-    <EntitySet Name="fis_t_data_insrt_detail" EntityType="Self.fis_t_data_insrt_detail" />
-    <EntitySet Name="usrinfo_mst_site" EntityType="Self.usrinfo_mst_site" />
-    <EntitySet Name="fis_mst_doc_type" EntityType="kmModel.fis_mst_doc_type" />
-  </EntityContainer>
-  <EntityType Name="fis_mst_doc_type">
-    <Key>
-      <PropertyRef Name="FIS_MST_DOC_TYPE_ID" />
-    </Key>
-    <Property Name="FIS_MST_DOC_TYPE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="FIS_MST_DOC_TYPE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="FIS_MST_DOC_TYPE_DETAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="FIS_MST_DOC_TYPE_IS_ACTIVE" Type="Boolean" Nullable="false" />
-    <Property Name="FIS_MST_DOC_TYPE_USR_INSRT" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="FIS_MST_DOC_TYPE_IDUSR_INSRT" Type="Int32" />
-    <Property Name="FIS_MST_DOC_TYPE_DATETIMESTMP" Type="DateTime" />
   </EntityType>
 </Schema>

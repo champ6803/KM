@@ -8,9 +8,11 @@
     <Property Name="FIS_MST_DOC_TYPE_NAME" Type="varchar" MaxLength="100" />
     <Property Name="FIS_MST_DOC_TYPE_DETAIL" Type="varchar" MaxLength="50" />
     <Property Name="FIS_MST_DOC_TYPE_IS_ACTIVE" Type="bool" Nullable="false" />
-    <Property Name="FIS_MST_DOC_TYPE_USR_INSRT" Type="varchar" MaxLength="45" />
-    <Property Name="FIS_MST_DOC_TYPE_IDUSR_INSRT" Type="int" />
-    <Property Name="FIS_MST_DOC_TYPE_DATETIMESTMP" Type="datetime" Precision="0" />
+    <Property Name="FIS_MST_DOC_TYPE_CREATED_BY" Type="varchar" MaxLength="45" />
+    <Property Name="FIS_MST_DOC_TYPE_CREATED_BY_ID" Type="int" />
+    <Property Name="FIS_MST_DOC_TYPE_CREATED_AT" Type="timestamp" Precision="0" Nullable="false" />
+    <Property Name="FIS_MST_DOC_TYPE_UPDATED_BY" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FIS_MST_DOC_TYPE_UPDATED_AT" Type="timestamp" Precision="0" Nullable="false" />
   </EntityType>
   <EntityType Name="fis_t_data_insrt">
     <Key>

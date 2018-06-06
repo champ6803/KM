@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using KM.Web.Models;
 using KM.Web.Entities;
+using KM.Web.Helpers;
+using KM.Web.Models;
 
 namespace KM.Web.Libraries
 {
-    public class FisMstDocTypeLibrary
+    public class CategoriesLibrary
     {
-        string SOURCE = "FisMstDocTypeLibrary";
+        string SOURCE = "CategoriesLibrary";
         string ACTION = "";
         kmEntities dbh = new kmEntities();
 
@@ -83,7 +84,7 @@ namespace KM.Web.Libraries
             return dbh.fis_mst_doc_type;
         }
 
-        public List<FisMstDocTypeModel> GetFisMstDocTypeList()
+        public List<FisMstDocTypeModel> GetCategoriesList()
         {
             //ACTION = "GetFisMstDocTypeModel()";
 

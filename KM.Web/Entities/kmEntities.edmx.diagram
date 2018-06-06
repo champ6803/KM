@@ -5,10 +5,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="2a984941aaf3459ab17973e5319b9d5a" Name="Diagram1">
-        <EntityTypeShape EntityType="kmModel.fis_t_data_insrt" Width="1.5" PointX="7" PointY="0.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="kmModel.fis_t_data_insrt_detail" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="kmModel.usrinfo_mst_site" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="kmModel.fis_mst_doc_type" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="kmModel.fis_t_data_insrt" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="kmModel.fis_t_data_insrt_detail" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="kmModel.usrinfo_mst_site" Width="1.5" PointX="0.75" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

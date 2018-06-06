@@ -25,9 +25,9 @@ namespace KM.Web.Entities
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<fis_mst_doc_type> fis_mst_doc_type { get; set; }
         public virtual DbSet<fis_t_data_insrt> fis_t_data_insrt { get; set; }
         public virtual DbSet<fis_t_data_insrt_detail> fis_t_data_insrt_detail { get; set; }
         public virtual DbSet<usrinfo_mst_site> usrinfo_mst_site { get; set; }
-        public virtual DbSet<fis_mst_doc_type> fis_mst_doc_type { get; set; }
     }
 }

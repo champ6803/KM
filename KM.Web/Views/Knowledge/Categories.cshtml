@@ -11,6 +11,8 @@
     </ol>
 }
 <!-- content -->
+
+<input hidden id="cateList" />
 <section class="content">
     <!-- Default box -->
     <div class="box">
@@ -20,12 +22,12 @@
                 <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
                     <i class="fa fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
-                    <i class="fa fa-times"></i>
-                </button>
+                @*<button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
+                        <i class="fa fa-times"></i>
+                    </button>*@
             </div>
         </div>
-        <div class="box-body">
+        <div id="categories_body" class="box-body">
             <div class="row">
                 <div class="col-md-6">
                     <div class="info-box">
@@ -80,10 +82,10 @@
             </div>
         </div>
         <!-- /.box-body -->
-        @*<div class="box-footer">
-                Footer
-            </div>*@
-        <!-- /.box-footer-->
     </div>
     <!-- /.box -->
 </section>
+
+@section scripts{
+    <script src="@Url.Content("~/js/Knowlegde/categories.js")"></script>
+}

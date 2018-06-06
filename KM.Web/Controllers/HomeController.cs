@@ -13,24 +13,23 @@ namespace KM.Web.Controllers
         public ActionResult Index()
         {
             FisMstDocTypeHelper fmdtHelper = new FisMstDocTypeHelper();
-            ViewBag.Title = "Home";
             var docTypeList = fmdtHelper.GetFisMstDocTypeList();
-
             return View(docTypeList);
         }
 
-        public ActionResult About()
+        public ActionResult GetMasterDoctype()
         {
-            ViewBag.Message = "Your application description page.";
+            try
+            {
+                FisMstDocTypeHelper docTypeHelper = new FisMstDocTypeHelper();
+                var masterDocType = docTypeHelper.GetFisMstDocTypeList();
+                return Json(masterDocType, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(false, JsonRequestBehavior.AllowGet);
+            }
 
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
     }
 }

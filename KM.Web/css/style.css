@@ -4,7 +4,8 @@
 
 .info-box:hover {
     background-color: #f1f5f7;
-    border: #f1f5f7;
+    
+    /*border: #f1f5f7;*/
     /*color: #ffffff;*/
     cursor: pointer;
 }

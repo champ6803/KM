@@ -1,6 +1,4 @@
-﻿@model  KM.Web.Models.FisMstDocTypeModel
-
-<!-- header name -->
+﻿<!-- header name -->
 @section header{
     Home
 }
@@ -20,5 +18,27 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-12">
+            <table id="doc_type_table" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            Document Type Id
+                        </th>
+                        <th>
+                            Document Type Name
+                        </th>
+                        <th>
+                            Document Type Detail
+                        </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
     </div>
 </section>
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/js/Home/index.js")"></script>
+}
