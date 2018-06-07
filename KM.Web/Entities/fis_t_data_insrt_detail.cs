@@ -16,7 +16,11 @@ namespace KM.Web.Entities
     {
         public int FIS_T_DATA_INSRT_DETAIL_ID { get; set; }
         public Nullable<int> FIS_T_DATA_INSRT_ID { get; set; }
-        public string FIS_T_DATA_INSRT_DETAIL1 { get; set; }
-        public Nullable<System.DateTime> FIS_T_DATA_INSRT_DETAIL_DATETIMESTMP { get; set; }
+        public string FIS_T_DATA_INSRT_DETAIL_DES { get; set; }
+        public bool FIS_T_DATA_INSRT_DETAIL_IS_ACTIVE { get; set; }
+        public string FIS_T_DATA_INSRT_DETAIL_CREATED_BY { get; set; }
+        public System.DateTime FIS_T_DATA_INSRT_DETAIL_CREATED_AT { get; set; }
+        public string FIS_T_DATA_INSRT_UPDATED_BY { get; set; }
+        public System.DateTime FIS_T_DATA_INSRT_UPDATED_AT { get; set; }
     }
 }

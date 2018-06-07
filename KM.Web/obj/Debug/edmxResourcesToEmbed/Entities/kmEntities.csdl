@@ -27,10 +27,12 @@
     <Property Name="FIS_T_DATA_INSRT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="FIS_MST_DOC_TYPE_ID" Type="Int32" Nullable="false" />
     <Property Name="USRINFO_MST_SITE_ID" Type="Int32" Nullable="false" />
-    <Property Name="USRINFO_T_USR_ID" Type="Int32" Nullable="false" />
-    <Property Name="FIS_T_DATA_INSRT_DATETIME" Type="DateTime" />
-    <Property Name="FIS_T_DATA_INSRT_DATETIMESTMP" Type="DateTime" />
-    <Property Name="FIS_T_DATA_INSRT_FLAG" Type="Int32" />
+    <Property Name="FIS_T_DATA_INSRT_NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FIS_T_DATA_INSRT_IS_ACTIVE" Type="Boolean" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_CREATED_BY" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FIS_T_DATA_INSRT_CREATED_AT" Type="DateTime" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_UPDATED_BY" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FIS_T_DATA_INSRT_UPDATED_AT" Type="DateTime" Nullable="false" />
   </EntityType>
   <EntityType Name="fis_t_data_insrt_detail">
     <Key>
@@ -38,8 +40,12 @@
     </Key>
     <Property Name="FIS_T_DATA_INSRT_DETAIL_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="FIS_T_DATA_INSRT_ID" Type="Int32" />
-    <Property Name="FIS_T_DATA_INSRT_DETAIL1" Type="String" MaxLength="5100" FixedLength="false" Unicode="false" />
-    <Property Name="FIS_T_DATA_INSRT_DETAIL_DATETIMESTMP" Type="DateTime" />
+    <Property Name="FIS_T_DATA_INSRT_DETAIL_DES" Type="String" MaxLength="5100" FixedLength="false" Unicode="false" />
+    <Property Name="FIS_T_DATA_INSRT_DETAIL_IS_ACTIVE" Type="Boolean" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_DETAIL_CREATED_BY" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FIS_T_DATA_INSRT_DETAIL_CREATED_AT" Type="DateTime" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_UPDATED_BY" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FIS_T_DATA_INSRT_UPDATED_AT" Type="DateTime" Nullable="false" />
   </EntityType>
   <EntityType Name="usrinfo_mst_site">
     <Key>
@@ -47,6 +53,10 @@
     </Key>
     <Property Name="USRINFO_MST_SITE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="USRINFO_MST_SITE_NAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="USRINFO_MST_SITE_DATE" Type="DateTime" />
+    <Property Name="USRINFO_MST_SITE_IS_ACTIVE" Type="Boolean" Nullable="false" />
+    <Property Name="USRINFO_MST_SITE_CREATED_BY" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USRINFO_MST_SITE_CREATED_AT" Type="DateTime" Nullable="false" />
+    <Property Name="USRINFO_MST_SITE_UPDATED_BY" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USRINFO_MST_SITE_UPDATED_AT" Type="DateTime" Nullable="false" />
   </EntityType>
 </Schema>

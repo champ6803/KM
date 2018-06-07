@@ -21,10 +21,12 @@
     <Property Name="FIS_T_DATA_INSRT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FIS_MST_DOC_TYPE_ID" Type="int" Nullable="false" />
     <Property Name="USRINFO_MST_SITE_ID" Type="int" Nullable="false" />
-    <Property Name="USRINFO_T_USR_ID" Type="int" Nullable="false" />
-    <Property Name="FIS_T_DATA_INSRT_DATETIME" Type="datetime" Precision="0" />
-    <Property Name="FIS_T_DATA_INSRT_DATETIMESTMP" Type="datetime" Precision="0" />
-    <Property Name="FIS_T_DATA_INSRT_FLAG" Type="int" />
+    <Property Name="FIS_T_DATA_INSRT_NAME" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_IS_ACTIVE" Type="bool" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_CREATED_BY" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_CREATED_AT" Type="timestamp" Precision="0" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_UPDATED_BY" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_UPDATED_AT" Type="timestamp" Precision="0" Nullable="false" />
   </EntityType>
   <EntityType Name="fis_t_data_insrt_detail">
     <Key>
@@ -32,8 +34,12 @@
     </Key>
     <Property Name="FIS_T_DATA_INSRT_DETAIL_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FIS_T_DATA_INSRT_ID" Type="int" />
-    <Property Name="FIS_T_DATA_INSRT_DETAIL" Type="varchar" MaxLength="5100" />
-    <Property Name="FIS_T_DATA_INSRT_DETAIL_DATETIMESTMP" Type="datetime" Precision="0" />
+    <Property Name="FIS_T_DATA_INSRT_DETAIL_DES" Type="varchar" MaxLength="5100" />
+    <Property Name="FIS_T_DATA_INSRT_DETAIL_IS_ACTIVE" Type="bool" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_DETAIL_CREATED_BY" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_DETAIL_CREATED_AT" Type="timestamp" Precision="0" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_UPDATED_BY" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FIS_T_DATA_INSRT_UPDATED_AT" Type="timestamp" Precision="0" Nullable="false" />
   </EntityType>
   <EntityType Name="usrinfo_mst_site">
     <Key>
@@ -41,7 +47,11 @@
     </Key>
     <Property Name="USRINFO_MST_SITE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="USRINFO_MST_SITE_NAME" Type="varchar" MaxLength="45" />
-    <Property Name="USRINFO_MST_SITE_DATE" Type="date" />
+    <Property Name="USRINFO_MST_SITE_IS_ACTIVE" Type="bool" Nullable="false" />
+    <Property Name="USRINFO_MST_SITE_CREATED_BY" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="USRINFO_MST_SITE_CREATED_AT" Type="timestamp" Precision="0" Nullable="false" />
+    <Property Name="USRINFO_MST_SITE_UPDATED_BY" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="USRINFO_MST_SITE_UPDATED_AT" Type="timestamp" Precision="0" Nullable="false" />
   </EntityType>
   <EntityContainer Name="kmModelStoreContainer">
     <EntitySet Name="fis_mst_doc_type" EntityType="Self.fis_mst_doc_type" Schema="km" store:Type="Tables" />

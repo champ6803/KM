@@ -17,9 +17,11 @@ namespace KM.Web.Entities
         public int FIS_T_DATA_INSRT_ID { get; set; }
         public int FIS_MST_DOC_TYPE_ID { get; set; }
         public int USRINFO_MST_SITE_ID { get; set; }
-        public int USRINFO_T_USR_ID { get; set; }
-        public Nullable<System.DateTime> FIS_T_DATA_INSRT_DATETIME { get; set; }
-        public Nullable<System.DateTime> FIS_T_DATA_INSRT_DATETIMESTMP { get; set; }
-        public Nullable<int> FIS_T_DATA_INSRT_FLAG { get; set; }
+        public string FIS_T_DATA_INSRT_NAME { get; set; }
+        public bool FIS_T_DATA_INSRT_IS_ACTIVE { get; set; }
+        public string FIS_T_DATA_INSRT_CREATED_BY { get; set; }
+        public System.DateTime FIS_T_DATA_INSRT_CREATED_AT { get; set; }
+        public string FIS_T_DATA_INSRT_UPDATED_BY { get; set; }
+        public System.DateTime FIS_T_DATA_INSRT_UPDATED_AT { get; set; }
     }
 }

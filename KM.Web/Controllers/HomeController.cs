@@ -12,9 +12,7 @@ namespace KM.Web.Controllers
     {
         public ActionResult Index()
         {
-            FisMstDocTypeHelper fmdtHelper = new FisMstDocTypeHelper();
-            var docTypeList = fmdtHelper.GetFisMstDocTypeList();
-            return View(docTypeList);
+            return View();
         }
 
         public ActionResult GetMasterDoctype()

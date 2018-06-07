@@ -39,7 +39,7 @@ function bindCategories(list) {
                 html = html + '<div class="row">';
                 html = html + '<div class="col-md-6">';
                 html = html + '<div class="info-box">';
-                html = html + '<a target="_blank" href="' + base_path + 'Knowledge/Documents">';
+                html = html + '<a target="_blank" href="' + base_path + 'Knowledge/Documents?docTypeId=' + this.FIS_MST_DOC_TYPE_ID + '">';
                 html = html + '<span class="info-box-icon bg-' + color + '"><i class="fa fa-file"></i></span>';
                 html = html + '<div class="info-box-content">';
                 html = html + '<span class="info-box-number">' + this.FIS_MST_DOC_TYPE_NAME + '</span>';
@@ -53,7 +53,7 @@ function bindCategories(list) {
             {
                 html = html + '<div class="col-md-6">';
                 html = html + '<div class="info-box">';
-                html = html + '<a target="_blank" href="' + base_path + 'Knowledge/Documents">';
+                html = html + '<a target="_blank" href="' + base_path + 'Knowledge/Documents?docTypeId=' + this.FIS_MST_DOC_TYPE_ID + '">';
                 html = html + '<span class="info-box-icon bg-' + color + '"><i class="fa fa-file"></i></span>';
                 html = html + '<div class="info-box-content">';
                 html = html + '<span class="info-box-number">' + this.FIS_MST_DOC_TYPE_NAME + '</span>';
